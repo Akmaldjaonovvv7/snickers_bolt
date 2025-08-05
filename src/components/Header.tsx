@@ -18,10 +18,7 @@ const Header: React.FC<HeaderProps> = ({ onCartClick }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center font-bold text-xl text-white shadow-lg">
-              S
-            </div>
-            <span className="text-2xl font-bold text-white tracking-tight">SNICKERS</span>
+      <img src="https://www.snickers.com/sites/g/files/fnmzdf616/files/Snickers_NFL_Lockups-horizontal-01_2023%20%281%29.png" width={150} alt="" />
           </div>
 
           {/* Desktop Navigation */}
