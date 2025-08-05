@@ -1,0 +1,157 @@
+/* Custom animations and effects */
+
+@keyframes chocolateBreak {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes floatingPeanut {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes caramelDrizzle {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 100%;
+    opacity: 0.8;
+  }
+  100% {
+    height: 100%;
+    opacity: 0.4;
+  }
+}
+
+@keyframes meltingChocolate {
+  0% {
+    transform: scaleY(1);
+    border-radius: 10px 10px 0 0;
+  }
+  100% {
+    transform: scaleY(1.5);
+    border-radius: 50% 50% 0 0;
+  }
+}
+
+/* Apply animations */
+.chocolate-break {
+  background: linear-gradient(45deg, #8B4513, #A0522D, #CD853F);
+  animation: chocolateBreak 4s ease-in-out infinite;
+}
+
+.floating-peanut {
+  animation: floatingPeanut 3s ease-in-out infinite;
+}
+
+.caramel-drizzle {
+  animation: caramelDrizzle 2s ease-out infinite;
+}
+
+.melting-chocolate {
+  animation: meltingChocolate 2s ease-in-out infinite alternate;
+}
+
+/* Text shadow utility */
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #D4A574, #E6B887);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #C19A6B, #D4A574);
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Pulse animation for CTAs */
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.6);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .floating-peanut {
+    display: none;
+  }
+  
+  .caramel-drizzle {
+    width: 1px;
+    height: 20px;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus {
+  outline: 2px solid #F97316;
+  outline-offset: 2px;
+}
